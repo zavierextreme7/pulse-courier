@@ -1,0 +1,89 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.env
+.env.*
+!.env.example
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+pytest_cache/
+.pytest_cache/
+
+# Mypy / Ruff / Pyright
+.mypy_cache/
+.ruff_cache/
+.pyright/
+
+# VS Code / PyCharm
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+nul
+
+# Docker
+**/.docker/
+.dockerignore
+**/.env.local
+
+# Alembic
+alembic/*.pyc
+alembic/*/__pycache__/
+
+# Generated artifacts
+site/
+coverage.xml
+report.html
+
+# Node (if any UIs)
+node_modules/
+
+# others
+.history
+**/.history/
+**/.windsurf/
+_history/
+**/_history/
+_windsurf/
+**/_windsurf/
+CLAUDE.md
+/CLAUDE.md
+/claude.md

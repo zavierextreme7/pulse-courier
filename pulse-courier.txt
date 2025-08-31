@@ -1,0 +1,17 @@
+Платформа нотификаций (email/SMS/push/Slack/Telegram)
+Что это: единая точка отправки сообщений с фейловерами и шаблонами.
+Фичи: шаблоны (Jinja2), провайдеры и fallback, rate limit и квоты, очереди и ретраи с backoff, идемпотентность, вебхуки статусов, расписания.
+Стек: FastAPI, Celery/RQ + Redis/RabbitMQ, Postgres, провайдеры (SES/SendGrid/Twilio/FCM), S3/MinIO для вложений, Sentry, OpenTelemetry.
+Что показывает: интеграции, устойчивость к сбоям, оркестрация задач, SLA/SLO, трассировка.
+
+PulseCourier — платформа нотификаций (email/SMS/push/Slack/Telegram)
+GitHub: pulse-courier
+
+Документация: понятный README (описание, архитектура, как запустить локально/в докере, env пример, ADR‑заметки, roadmap, скриншоты/диаграмма).
+API: OpenAPI/Swagger, описанные схемы ошибок, Postman/Insomnia коллекция, примеры curl.
+Качество: тесты (unit/integration/e2e), покрытие, property‑based (Hypothesis), линтеры (ruff), форматер (black), типы (mypy), pre‑commit.
+CI/CD: GitHub Actions (линты, тесты, build, миграции), контейнеры (Dockerfile, docker‑compose), автотэги релизов, превью‑деплой (Render/Fly.io/Cloud Run).
+БД и миграции: Alembic, сиды/фикстуры, индексы, N+1‑контроль, профайлинг запросов.
+Наблюдаемость: структурные логи, метрики Prometheus, трассировки OpenTelemetry, дешборды Grafana, алерты.
+Безопасность: валидация входа, rate limit, идемпотентность, защита секретов, bandit/safety сканы.
+Демоданные и сценарии: make targets или скрипты для «быстрого старта», нагрузочное тестирование (k6/Locust) и результаты в README.
